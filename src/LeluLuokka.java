@@ -4,20 +4,15 @@ public class LeluLuokka {
 	public static void main(String[] args) {
 		
 		
+		
 	}
 
 }
 
 class Lelu
 {
-	String name;
-	int weight;
-	
-	public Lelu(String n, int w)
-	{
-		name = n;
-		weight = w;
-	}
+	public String name;
+	public int weight;
 	
 	public void liiku()
 	{
@@ -27,6 +22,24 @@ class Lelu
 	public void tulostaTiedot()
 	{
 		System.out.println("Nimi: " + name);
-		System.out.println("Paino " + weight);
+		System.out.println("Paino: " + weight);
+	}
+}
+
+class Vieteri extends Lelu
+{
+	int nopeus;
+	
+	public void kiihdyta()
+	{
+		nopeus = nopeus + 1;
+	}
+	
+	@Override
+	public void tulostaTiedot()
+	{
+		System.out.println("Nimi: " + name);
+		System.out.println("Paino: " + weight);
+		System.out.println("Nopeus: " + nopeus);
 	}
 }
